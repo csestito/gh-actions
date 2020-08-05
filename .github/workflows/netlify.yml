@@ -33,5 +33,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          msg: ${{ steps.build_netlify.outputs }}
+          msg: ${{ steps.build_netlify.NETLIFY_OUTPUT }}
           check_for_duplicate_msg: false  # OPTIONAL 
