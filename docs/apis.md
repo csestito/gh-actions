@@ -10,6 +10,7 @@ keywords:
   - xml
   - api
   - rest
+  - apis
 image: /img/panos_apis.svg
 ---
 
