@@ -30,7 +30,7 @@ jobs:
         if: contains(github.event.comment.body, 'special string')
         env:
           URL: ${{ github.event.issue.comments_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ GITHUB_TOKEN }}
         run: |
           curl \
             -X POST \
