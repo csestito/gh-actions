@@ -1,11 +1,10 @@
- [![Netlify Status](https://api.netlify.com/api/v1/badges/3fa2caf5-c35f-4afb-9770-0b854ee4fd06/deploy-status)](https://app.netlify.com/sites/boring-panini-f3993d/deploys) ![Build and Deploy](https://github.com/csestito/gh-actions/workflows/Build%20and%20Deploy/badge.svg)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3fa2caf5-c35f-4afb-9770-0b854ee4fd06/deploy-status)](https://app.netlify.com/sites/boring-panini-f3993d/deploys) ![Build and Deploy](https://github.com/csestito/gh-actions/workflows/Build%20and%20Deploy/badge.svg)
 
 # PAN-OS® for Developers
 
 This website is built using Docusaurus 2, a modern static website generator.
 
-> URL: https://panos.pan.dev
+> URL: https://boring-panini-f3993d.netlify.app/
 
 ### Installation
 
