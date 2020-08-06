@@ -1,6 +1,4 @@
-https://github.com/csestito/gh-actions/workflows/Build%20and%20Deploy%20to%20Netlify/badge.svg
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/791dfbf1-c6e8-447d-ac4d-220cb8aa7c6f/deploy-status)](https://app.netlify.com/sites/condescending-mcclintock-5c4d6f/deploys)
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/3fa2caf5-c35f-4afb-9770-0b854ee4fd06/deploy-status)](https://app.netlify.com/sites/boring-panini-f3993d/deploys) ![Build and Deploy](https://github.com/csestito/gh-actions/workflows/Build%20and%20Deploy/badge.svg)
 
 
 # PAN-OS® for Developers
