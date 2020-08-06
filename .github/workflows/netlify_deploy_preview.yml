@@ -38,12 +38,12 @@ jobs:
 
       - name: Build deploy preview
         id: deploy-netlify
-        uses: netlify/actions/cli@master
+        run: |
+          sudo yarn global add netlify-cli
+          netlify deploy --dir=build
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=build
 
       - name: Comment deploy preview URLs
         uses: unsplash/comment-on-pr@master
