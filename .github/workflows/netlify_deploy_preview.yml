@@ -40,8 +40,7 @@ jobs:
         id: deploy-netlify
         run: |
           sudo yarn global add netlify-cli
-          NETLIFY_OUTPUT=$(netlify deploy --dir=build)
-          echo "::set-output name=NETLIFY_OUTPUT::$NETLIFY_OUTPUT"
+          echo ::set-env name=NETLIFY_OUTPUT::$(netlify deploy --dir=build)
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
@@ -49,8 +48,8 @@ jobs:
       - name: Set Netlify URL envars
         id: netlify-envars
         run: |
-          NETLIFY_URL=$(echo "${{ steps.deploy-netlify.outputs.NETLIFY_OUTPUT }}" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*(--)[a-zA-Z0-9./?=_-]*')
-          NETLIFY_LOGS_URL=$(echo "${{ steps.deploy-netlify.outputs.NETLIFY_OUTPUT }}"| grep -Eo '(http|https)://app.netlify.com/[a-zA-Z0-9./?=_-]*')
+          NETLIFY_URL=$(echo ${{ env.NETLIFY_OUTPUT }} | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*(--)[a-zA-Z0-9./?=_-]*')
+          NETLIFY_LOGS_URL=$(echo ${{ env.NETLIFY_OUTPUT }} | grep -Eo '(http|https)://app.netlify.com/[a-zA-Z0-9./?=_-]*')
           echo "::set-output name=NETLIFY_URL::$NETLIFY_URL"
           echo "::set-output name=NETLIFY_LOGS_URL::$NETLIFY_LOGS_URL"
 
